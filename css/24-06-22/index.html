@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            background-color: blue;
+            display: flex;
+            justify-content: center;
+            height: 50vh;
+            align-items: start;
+        }
+
+        ul>li {
+            background-color: aqua;
+            list-style: none;
+            margin-right: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        ul>li:hover {
+            background-color: brown;
+            color: white;
+        }
+
+        ul>li:hover::before {
+            content: "HELLo";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: brown;
+            top: 0;
+            right: 0;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+</body>
+
+</html>
