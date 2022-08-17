@@ -9,21 +9,26 @@
 </head>
 
 <body>
+    <input type="text" id="input">
+    <input type="submit" id="submitbtn">
+    <ul id="unorder">
+        <li></li>
+    </ul>
     <script>
-        let a = prompt("Enter Your Name");
-        a = parseInt(a);
-        add(a, 3);
+        let btn = document.getElementById("submitbtn");
+        btn.addEventListener("click", function () {
 
-        function add(a, b) {
-            if (a + b >= 50) {
-                alert("A+");
-            } else if (a + b >= 30) {
-                alert("B+");
-            } else {
-                alert("Fail");
-            }
+            let input = document.getElementById("input");
+            let ul = document.getElementById("unorder");
+            let li = document.createElement('li');
+            let todoinput = document.createElement('input');
+            todoinput.setAttribute("type", 'text');
+            todoinput.setAttribute('value', input.value);
+            console.log(todoinput);
+            li.appendChild(todoinput);
+            ul.appendChild(li);
 
-        }
+        });
     </script>
 </body>
 
