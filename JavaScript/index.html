@@ -24,10 +24,27 @@
             let todoinput = document.createElement('input');
             todoinput.setAttribute("type", 'text');
             todoinput.setAttribute('value', input.value);
+            todoinput.setAttribute('readonly', 'readonly');
+            btn = document.createElement("button");
+            btn.innerText = "Edit";
+            btn.addEventListener('click', function () {
+                if (btn.innerText == "Edit") {
+                    todoinput.removeAttribute('readonly', 'readonly');
+                    btn.innerText = "Save";
+                } else {
+                    todoinput.setAttribute("readonly", 'readonly');
+                    btn.innerText = "Edit";
+                }
+            });
             console.log(todoinput);
             li.appendChild(todoinput);
+            li.appendChild(btn);
             ul.appendChild(li);
 
+        });
+        let array = ['html', 'css', 'bootstrap'];
+        array.forEach(element => {
+            console.log(element);
         });
     </script>
 </body>
